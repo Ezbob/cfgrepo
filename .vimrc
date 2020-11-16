@@ -44,3 +44,11 @@ inoremap <c-u> <esc>viwUi
 inoremap <c-d> <esc>ddi
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ct :MakeCTags
+
+iabbrev dont don't
+iabbrev isnt isn't
+iabbrev arent aren't
+iabbrev Br Best Regards<cr>Anders Busch<cr>
+iabbrev @@ andersbusch@gmail.com
+
