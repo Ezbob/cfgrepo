@@ -9,6 +9,7 @@ set showtabline=2 " the tab line is always on, showing the current file name alo
 set showcmd " normal mode commands that was inputted are now shown in the right hand left corner
 set hlsearch " search matches is highlighted
 set shiftround " round indent shift to shiftwidth
+set mouse=n
 set wrap
 set laststatus=2
 set stl=\ %f\ %m\ %r%=%l,%c\ 
@@ -45,10 +46,27 @@ inoremap <c-d> <esc>ddi
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ct :MakeCTags
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+vnoremap <leader>" <esc>i"<esc>v<`<esc>i"
+vnoremap <leader>' <esc>i'<esc>v<`<esc>i'
 
 iabbrev dont don't
 iabbrev isnt isn't
 iabbrev arent aren't
 iabbrev Br Best Regards<cr>Anders Busch<cr>
 iabbrev @@ andersbusch@gmail.com
+
+" training wheels!
+inoremap <esc> <nop>
+inoremap jk <esc> 
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
 
