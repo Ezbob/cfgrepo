@@ -28,7 +28,6 @@ set path+=**
 
 let mapleader=","
 let maplocalleader="."
-
 " netrw file explorer
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
@@ -70,3 +69,8 @@ nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 
+" mappings on file type
+autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+autocmd FileType c nnoremap <buffer> <localleader>c I//<esc>
