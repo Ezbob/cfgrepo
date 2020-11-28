@@ -5,14 +5,14 @@ syntax on " vim guesses the syntax highlightning for the opened file
 
 set number " line numbers are on, in the left margin
 set numberwidth=4
-set showtabline=2 " the tab line is always on, showing the current file name along with some of the path
+set showtabline=1 " tabline redudant with status line 
 set showcmd " normal mode commands that was inputted are now shown in the right hand left corner
 set hlsearch " search matches is highlighted
 set shiftround " round indent shift to shiftwidth
 set mouse=n
 set wrap
 set laststatus=2
-set stl=\ %f\ %m\ %r%=%l,%c\ 
+set stl=\ F:\ %f\ %m\ %r%=L:\ %l,%c\ 
 
 set showfulltag
 set nocompatible
@@ -58,7 +58,7 @@ iabbrev @@ andersbusch@gmail.com
 
 " training wheels!
 inoremap <esc> <nop>
-inoremap jk <esc> 
+inoremap jk <esc>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
@@ -70,7 +70,13 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 
 " mappings on file type
-autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
-autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
-autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
-autocmd FileType c nnoremap <buffer> <localleader>c I//<esc>
+augroup filetype_clike
+    autocmd!
+    autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+    autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+    autocmd FileType c nnoremap <buffer> <localleader>c I//<esc>
+augroup END
+
+augroup filetype_hashcmd
+    autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+augroup END
