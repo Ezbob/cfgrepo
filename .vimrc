@@ -42,6 +42,8 @@ command! MakeCTags !ctags -R .
 
 inoremap <c-u> <esc>viwUi
 inoremap <c-d> <esc>ddi
+inoremap <c-s> <esc>:write<cr>i
+nnoremap <c-s> <esc>:write<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ct :MakeCTags
@@ -59,6 +61,7 @@ iabbrev @@ andersbusch@gmail.com
 " training wheels!
 inoremap <esc> <nop>
 inoremap jk <esc>
+inoremap kj <esc>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>

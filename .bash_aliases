@@ -1,5 +1,5 @@
 
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 config() {
    local default_params="--git-dir=$HOME/.cfgrepo/ --work-tree=$HOME"
@@ -13,3 +13,4 @@ config() {
 open() {
    xdg-open $@
 }
+
