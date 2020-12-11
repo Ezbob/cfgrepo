@@ -67,6 +67,14 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
+vnoremap <esc> <nop>
+vnoremap jk <esc>
+vnoremap kj <esc>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
@@ -86,5 +94,5 @@ augroup END
 
 augroup filetype_makefile
     autocmd!
-    autocmd FileType make set noexpandtab 
+    autocmd FileType make setlocal noexpandtab
 augroup END
