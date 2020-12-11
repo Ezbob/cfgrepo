@@ -6,7 +6,7 @@ config() {
    if [ "$#" == "0" ]; then
       git $default_params status --short
    else
-      git $default_params $@
+      git $default_params "$@"
    fi
 }
 
