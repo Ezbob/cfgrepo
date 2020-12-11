@@ -83,3 +83,8 @@ augroup END
 augroup filetype_hashcmd
     autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 augroup END
+
+augroup filetype_makefile
+    autocmd!
+    autocmd FileType make set noexpandtab 
+augroup END
